@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
+[*] Thu Jan 22 14:27:18 2026
+[*]
+[dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_rx.ghw"
+[dumpfile_mtime] "Thu Jan 22 14:25:26 2026"
+[dumpfile_size] 828716
+[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_rx.gtkw"
+[timestart] 0
+[size] 1920 983
+[pos] -27 -24
+*-35.400002 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_uart_rx.
+[treeopen] top.tb_uart_rx.u_rx.
+[sst_width] 280
+[signals_width] 200
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.tb_uart_rx.u_rx.clk
+top.tb_uart_rx.u_rx.rst
+top.tb_uart_rx.u_rx.uart_tick
+@420
+top.tb_uart_rx.u_rx.state
+@28
+top.tb_uart_rx.u_rx.rx
+@22
+#{top.tb_uart_rx.u_rx.rx_data[7:0]} top.tb_uart_rx.u_rx.rx_data[7] top.tb_uart_rx.u_rx.rx_data[6] top.tb_uart_rx.u_rx.rx_data[5] top.tb_uart_rx.u_rx.rx_data[4] top.tb_uart_rx.u_rx.rx_data[3] top.tb_uart_rx.u_rx.rx_data[2] top.tb_uart_rx.u_rx.rx_data[1] top.tb_uart_rx.u_rx.rx_data[0]
+@23
+#{top.tb_uart_rx.data_to_send[7:0]} top.tb_uart_rx.data_to_send[7] top.tb_uart_rx.data_to_send[6] top.tb_uart_rx.data_to_send[5] top.tb_uart_rx.data_to_send[4] top.tb_uart_rx.data_to_send[3] top.tb_uart_rx.data_to_send[2] top.tb_uart_rx.data_to_send[1] top.tb_uart_rx.data_to_send[0]
+[pattern_trace] 1
+[pattern_trace] 0
