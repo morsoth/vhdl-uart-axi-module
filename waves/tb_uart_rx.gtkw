@@ -1,33 +1,54 @@
 [*]
 [*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
-[*] Thu Jan 22 14:27:18 2026
+[*] Thu Jan 29 12:08:47 2026
 [*]
 [dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_rx.ghw"
-[dumpfile_mtime] "Thu Jan 22 14:25:26 2026"
-[dumpfile_size] 828716
-[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_rx.gtkw"
+[dumpfile_mtime] "Thu Jan 29 12:03:35 2026"
+[dumpfile_size] 83216
+[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\waves\tb_uart_rx.gtkw"
 [timestart] 0
 [size] 1920 983
 [pos] -27 -24
-*-35.400002 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-35.100002 1900000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.tb_uart_rx.
-[treeopen] top.tb_uart_rx.u_rx.
+[treeopen] top.tb_uart_rx.dut.
 [sst_width] 280
 [signals_width] 200
 [sst_expanded] 1
 [sst_vpaned_height] 289
 @28
-top.tb_uart_rx.u_rx.clk
-top.tb_uart_rx.u_rx.rst
-top.tb_uart_rx.u_rx.uart_tick
-@420
-top.tb_uart_rx.u_rx.state
+top.tb_uart_rx.dut.clk
+top.tb_uart_rx.dut.rst
+@200
+-
+-TICKS
 @28
-top.tb_uart_rx.u_rx.rx
+top.tb_uart_rx.dut.uart_tick_en
+@420
+top.tb_uart_rx.dut.div_count
+@28
+top.tb_uart_rx.dut.uart_tick
+@420
+top.tb_uart_rx.dut.tick_count
+@200
+-
+-UART RX
+@420
+top.tb_uart_rx.dut.state
+@28
+top.tb_uart_rx.dut.rx
+top.tb_uart_rx.dut.rx_ff1
+top.tb_uart_rx.dut.rx_ff2
 @22
-#{top.tb_uart_rx.u_rx.rx_data[7:0]} top.tb_uart_rx.u_rx.rx_data[7] top.tb_uart_rx.u_rx.rx_data[6] top.tb_uart_rx.u_rx.rx_data[5] top.tb_uart_rx.u_rx.rx_data[4] top.tb_uart_rx.u_rx.rx_data[3] top.tb_uart_rx.u_rx.rx_data[2] top.tb_uart_rx.u_rx.rx_data[1] top.tb_uart_rx.u_rx.rx_data[0]
-@23
-#{top.tb_uart_rx.data_to_send[7:0]} top.tb_uart_rx.data_to_send[7] top.tb_uart_rx.data_to_send[6] top.tb_uart_rx.data_to_send[5] top.tb_uart_rx.data_to_send[4] top.tb_uart_rx.data_to_send[3] top.tb_uart_rx.data_to_send[2] top.tb_uart_rx.data_to_send[1] top.tb_uart_rx.data_to_send[0]
+#{top.tb_uart_rx.dut.data_reg[7:0]} top.tb_uart_rx.dut.data_reg[7] top.tb_uart_rx.dut.data_reg[6] top.tb_uart_rx.dut.data_reg[5] top.tb_uart_rx.dut.data_reg[4] top.tb_uart_rx.dut.data_reg[3] top.tb_uart_rx.dut.data_reg[2] top.tb_uart_rx.dut.data_reg[1] top.tb_uart_rx.dut.data_reg[0]
+@200
+-
+@201
+-OUTPUT
+@22
+#{top.tb_uart_rx.dut.rx_data[7:0]} top.tb_uart_rx.dut.rx_data[7] top.tb_uart_rx.dut.rx_data[6] top.tb_uart_rx.dut.rx_data[5] top.tb_uart_rx.dut.rx_data[4] top.tb_uart_rx.dut.rx_data[3] top.tb_uart_rx.dut.rx_data[2] top.tb_uart_rx.dut.rx_data[1] top.tb_uart_rx.dut.rx_data[0]
+@28
+top.tb_uart_rx.dut.rx_valid
 [pattern_trace] 1
 [pattern_trace] 0

@@ -27,8 +27,6 @@ entity uart_core is
 end entity;
 
 architecture rtl of uart_core is
-    signal uart_tick : std_logic := '0';
-
     signal rx_wr_en   : std_logic;
     signal rx_wr_data : std_logic_vector(DATA_BITS-1 downto 0);
 
@@ -44,29 +42,17 @@ architecture rtl of uart_core is
     signal tx_busy    : std_logic;
 
 begin
-    -- BAUDRATE GENERATOR
-    u_baudgen : entity work.uart_baudgen
-        generic map (
-            CLK_HZ       => CLK_HZ,
-            BAUDRATE     => BAUDRATE,
-            OVERSAMPLING => OVERSAMPLING
-        )
-        port map (
-            clk       => clk,
-            rst       => rst,
-            uart_tick => uart_tick
-        );
-
     -- RX UART
     u_rx : entity work.uart_rx
         generic map (
-            DATA_BITS    => DATA_BITS,
-            OVERSAMPLING => OVERSAMPLING
+            CLK_HZ       => CLK_HZ,
+            BAUDRATE     => BAUDRATE,
+            OVERSAMPLING => OVERSAMPLING,
+            DATA_BITS => DATA_BITS
         )
         port map (
             clk       => clk,
             rst       => rst,
-            uart_tick => uart_tick,
             rx        => rx,
             rx_valid  => rx_wr_en,
             rx_data   => rx_wr_data
@@ -92,13 +78,13 @@ begin
     -- TX UART
     u_tx : entity work.uart_tx
         generic map (
-            DATA_BITS    => DATA_BITS,
-            OVERSAMPLING => OVERSAMPLING
+            CLK_HZ       => CLK_HZ,
+            BAUDRATE     => BAUDRATE,
+            DATA_BITS => DATA_BITS
         )
         port map (
             clk       => clk,
             rst       => rst,
-            uart_tick => uart_tick,
             tx        => tx,
             tx_start  => not tx_empty,
             tx_data   => tx_rd_data,

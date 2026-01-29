@@ -1,43 +1,49 @@
 [*]
 [*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
-[*] Mon Jan 26 17:53:46 2026
+[*] Thu Jan 29 15:21:40 2026
 [*]
 [dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_tx.ghw"
-[dumpfile_mtime] "Mon Jan 26 17:53:24 2026"
-[dumpfile_size] 699915
+[dumpfile_mtime] "Thu Jan 29 15:20:40 2026"
+[dumpfile_size] 704279
 [savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\waves\tb_uart_tx.gtkw"
 [timestart] 0
 [size] 1920 983
 [pos] -27 -24
-*-35.400002 96869000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-36.600002 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.tb_uart_tx.
-[treeopen] top.tb_uart_tx.u_tx.
+[treeopen] top.tb_uart_tx.dut.
 [sst_width] 280
 [signals_width] 299
 [sst_expanded] 1
 [sst_vpaned_height] 289
 @28
-top.tb_uart_tx.u_tx.clk
-top.tb_uart_tx.u_tx.rst
-top.tb_uart_tx.u_tx.uart_tick
+top.tb_uart_tx.dut.clk
+top.tb_uart_tx.dut.rst
 @200
 -
+-BAUDS
 @28
-top.tb_uart_tx.u_tx.tx_start
-top.tb_uart_tx.u_tx.tx_ready
-top.tb_uart_tx.u_tx.tx_busy
+top.tb_uart_tx.dut.uart_baud_en
+@421
+top.tb_uart_tx.dut.div_count
+@28
+top.tb_uart_tx.dut.uart_baud
 @200
 -
+-UART TX
 @420
-top.tb_uart_tx.u_tx.state
+top.tb_uart_tx.dut.state
+@28
+top.tb_uart_tx.dut.tx
+top.tb_uart_tx.dut.tx_start
+top.tb_uart_tx.dut.tx_accept
+top.tb_uart_tx.dut.tx_busy
 @200
 -
-@28
-top.tb_uart_tx.u_tx.tx
+-INPUT
 @22
-#{top.tb_uart_tx.data_to_read[7:0]} top.tb_uart_tx.data_to_read[7] top.tb_uart_tx.data_to_read[6] top.tb_uart_tx.data_to_read[5] top.tb_uart_tx.data_to_read[4] top.tb_uart_tx.data_to_read[3] top.tb_uart_tx.data_to_read[2] top.tb_uart_tx.data_to_read[1] top.tb_uart_tx.data_to_read[0]
-#{top.tb_uart_tx.u_tx.tx_data[7:0]} top.tb_uart_tx.u_tx.tx_data[7] top.tb_uart_tx.u_tx.tx_data[6] top.tb_uart_tx.u_tx.tx_data[5] top.tb_uart_tx.u_tx.tx_data[4] top.tb_uart_tx.u_tx.tx_data[3] top.tb_uart_tx.u_tx.tx_data[2] top.tb_uart_tx.u_tx.tx_data[1] top.tb_uart_tx.u_tx.tx_data[0]
-#{top.tb_uart_tx.u_tx.data_reg[7:0]} top.tb_uart_tx.u_tx.data_reg[7] top.tb_uart_tx.u_tx.data_reg[6] top.tb_uart_tx.u_tx.data_reg[5] top.tb_uart_tx.u_tx.data_reg[4] top.tb_uart_tx.u_tx.data_reg[3] top.tb_uart_tx.u_tx.data_reg[2] top.tb_uart_tx.u_tx.data_reg[1] top.tb_uart_tx.u_tx.data_reg[0]
+#{top.tb_uart_tx.dut.tx_data[7:0]} top.tb_uart_tx.dut.tx_data[7] top.tb_uart_tx.dut.tx_data[6] top.tb_uart_tx.dut.tx_data[5] top.tb_uart_tx.dut.tx_data[4] top.tb_uart_tx.dut.tx_data[3] top.tb_uart_tx.dut.tx_data[2] top.tb_uart_tx.dut.tx_data[1] top.tb_uart_tx.dut.tx_data[0]
+#{top.tb_uart_tx.dut.data_reg[7:0]} top.tb_uart_tx.dut.data_reg[7] top.tb_uart_tx.dut.data_reg[6] top.tb_uart_tx.dut.data_reg[5] top.tb_uart_tx.dut.data_reg[4] top.tb_uart_tx.dut.data_reg[3] top.tb_uart_tx.dut.data_reg[2] top.tb_uart_tx.dut.data_reg[1] top.tb_uart_tx.dut.data_reg[0]
 [pattern_trace] 1
 [pattern_trace] 0

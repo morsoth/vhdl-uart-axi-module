@@ -11,7 +11,6 @@ GHDLFLAGS := --std=08 --workdir=$(WORKDIR)
 
 RTL_SRCS := \
   rtl/fifo/fifo_sync.vhd \
-  rtl/uart/uart_baudgen.vhd \
   rtl/uart/uart_rx.vhd \
   rtl/uart/uart_tx.vhd \
   rtl/uart/uart_core.vhd

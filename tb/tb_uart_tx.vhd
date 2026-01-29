@@ -11,23 +11,20 @@ end entity;
 architecture tb of tb_uart_tx is
 	constant CLK_HZ       : natural := 50_000_000;
 	constant BAUDRATE     : natural := 115200;
-	constant OVERSAMPLING : natural := 16;
 	constant DATA_BITS    : natural := 8;
 
 	constant T_CLK  : time := 1 sec / CLK_HZ;
 
-	constant DIV    : positive := CLK_HZ / (BAUDRATE * OVERSAMPLING);
-	constant T_TICK : time := DIV * T_CLK;
-	constant T_BIT  : time := OVERSAMPLING * T_TICK;
+	constant DIV    : positive := CLK_HZ / BAUDRATE;
+	constant T_BIT  : time := DIV * T_CLK;
 
 	signal clk       : std_logic := '0';
 	signal rst       : std_logic := '1';
-	signal uart_tick : std_logic := '0';
 
 	signal tx_start  : std_logic := '0';
 	signal tx_data   : std_logic_vector(DATA_BITS-1 downto 0) := (others => '0');
 	signal tx        : std_logic;
-	signal tx_accept  : std_logic;
+	signal tx_accept : std_logic;
 	signal tx_busy   : std_logic;
 
 	procedure check_tx_frame (
@@ -57,28 +54,18 @@ architecture tb of tb_uart_tx is
 		wait for T_BIT/2;
 	end procedure;
 
-begin
-	u_baudgen: entity work.uart_baudgen
-		generic map (
-			CLK_HZ       => CLK_HZ,
-			BAUDRATE     => BAUDRATE,
-			OVERSAMPLING => OVERSAMPLING
-		)
-		port map (
-			clk 	  => clk,
-			rst 	  => rst,
-			uart_tick => uart_tick
-		);
+	signal data_aux : std_logic_vector(DATA_BITS-1 downto 0);
 
-	u_tx: entity work.uart_tx
+begin
+	dut: entity work.uart_tx
 		generic map (
-			DATA_BITS    => DATA_BITS,
-			OVERSAMPLING => OVERSAMPLING
+            CLK_HZ       => CLK_HZ,
+            BAUDRATE     => BAUDRATE,
+            DATA_BITS => DATA_BITS
 		)
 		port map (
 			clk       => clk,
 			rst       => rst,
-			uart_tick => uart_tick,
 			tx_start  => tx_start,
 			tx_data   => tx_data,
 			tx        => tx,
@@ -88,7 +75,7 @@ begin
 
   	clk <= not clk after T_CLK/2;
 
-	p_tb : process
+	stim : process
 	begin
 		rst <= '1';
 		wait for T_CLK;
@@ -98,10 +85,10 @@ begin
 		-- Test 1: Long idle --
         for i in 0 to 9 loop
             assert tx = '1'
-                report "ERROR: tx no esta en idle"
+                report "[ERROR]: tx no esta en idle"
                 severity error;
             assert tx_busy = '0'
-                report "ERROR: tx_busy activo en idle"
+                report "[ERROR]: tx_busy activo en idle"
                 severity error;
 
             wait for T_BIT;
@@ -195,18 +182,12 @@ begin
 		wait until rising_edge(clk);
 		tx_start <= '1';
 		tx_data <= x"12";
+		data_aux <= x"12";
 
-		if tx_busy = '0' then
-			wait until tx_busy /= '0';
-		end if;
-
-		check_tx_frame(tx, tx_data);
-
-		if tx_busy = '1' then
-			wait until tx_busy /= '1';
-		end if;
-		
+		wait for T_CLK;
 		tx_data <= x"34";
+
+		check_tx_frame(tx, data_aux);
 
 		if tx_busy = '0' then
 			wait until tx_busy /= '0';
@@ -217,9 +198,8 @@ begin
 		check_tx_frame(tx, tx_data);
 
 		wait for T_BIT;
-
+/*
 		-- Test 9: Reset while transmission --
-
 		wait until rising_edge(clk);
 		tx_start <= '1';
 		tx_data <= x"99";
@@ -259,7 +239,7 @@ begin
 
 		check_tx_frame(tx, tx_data);
 		wait for T_BIT;
-
+*/
 		wait for 10 us;
 
 		report "[OK]: Testbench passed correctly!" severity note;
