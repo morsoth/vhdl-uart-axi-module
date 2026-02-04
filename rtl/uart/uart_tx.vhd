@@ -36,6 +36,10 @@ architecture rtl of uart_tx is
     signal div_count : natural range 0 to DIV-1 := 0;
 
 begin
+    assert (CLK_HZ > BAUDRATE)
+        report "uart_tx: CLK_HZ too low for this baudrate"
+        severity failure;
+    
     uart_baud <= '1' when (uart_baud_en = '1') and (div_count = DIV-1) else '0';
 
     tx_busy <= '1' when state /= IDLE_ST else '0';

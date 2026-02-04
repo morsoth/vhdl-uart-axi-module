@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
+[*] Tue Feb  3 13:48:14 2026
+[*]
+[dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\build\tb_uart_loopback.ghw"
+[dumpfile_mtime] "Tue Feb  3 13:47:58 2026"
+[dumpfile_size] 95581
+[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-watchdog\waves\tb_uart_loopback.gtkw"
+[timestart] 0
+[size] 1920 983
+[pos] -27 -24
+*-34.200001 10110000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_uart_loopback.
+[treeopen] top.tb_uart_loopback.dut.
+[sst_width] 280
+[signals_width] 251
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@29
+top.tb_uart_loopback.dut.clk
+@28
+top.tb_uart_loopback.dut.rst
+@420
+top.tb_uart_loopback.dut.u_tx.state
+@28
+top.tb_uart_loopback.dut.tx
+top.tb_uart_loopback.dut.tx_ready
+top.tb_uart_loopback.dut.tx_en
+@22
+#{top.tb_uart_loopback.dut.u_tx.tx_data[7:0]} top.tb_uart_loopback.dut.u_tx.tx_data[7] top.tb_uart_loopback.dut.u_tx.tx_data[6] top.tb_uart_loopback.dut.u_tx.tx_data[5] top.tb_uart_loopback.dut.u_tx.tx_data[4] top.tb_uart_loopback.dut.u_tx.tx_data[3] top.tb_uart_loopback.dut.u_tx.tx_data[2] top.tb_uart_loopback.dut.u_tx.tx_data[1] top.tb_uart_loopback.dut.u_tx.tx_data[0]
+@420
+top.tb_uart_loopback.dut.u_rx.state
+@28
+top.tb_uart_loopback.dut.rx
+top.tb_uart_loopback.dut.u_rx.rx_ff1
+top.tb_uart_loopback.dut.u_rx.rx_ff2
+top.tb_uart_loopback.dut.rx_ready
+top.tb_uart_loopback.dut.rx_en
+@22
+#{top.tb_uart_loopback.dut.u_rx.rx_data[7:0]} top.tb_uart_loopback.dut.u_rx.rx_data[7] top.tb_uart_loopback.dut.u_rx.rx_data[6] top.tb_uart_loopback.dut.u_rx.rx_data[5] top.tb_uart_loopback.dut.u_rx.rx_data[4] top.tb_uart_loopback.dut.u_rx.rx_data[3] top.tb_uart_loopback.dut.u_rx.rx_data[2] top.tb_uart_loopback.dut.u_rx.rx_data[1] top.tb_uart_loopback.dut.u_rx.rx_data[0]
+[pattern_trace] 1
+[pattern_trace] 0

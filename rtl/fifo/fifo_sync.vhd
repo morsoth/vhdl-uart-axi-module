@@ -44,6 +44,10 @@ architecture rtl of fifo_sync is
     end function;
 
 begin
+    assert (SIZE >= 1)
+        report "fifo_sync: SIZE must be greater than 0"
+        severity failure;
+
     empty <= '1' when count = 0 else '0';
     full <= '1' when count = SIZE else '0';
 

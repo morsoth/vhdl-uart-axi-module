@@ -34,7 +34,16 @@ architecture rtl of uart_rx is
     
     constant DIV : positive := CLK_HZ / (BAUDRATE * OVERSAMPLING);
     signal div_count : natural range 0 to DIV-1 := 0;
+
 begin
+    assert (OVERSAMPLING mod 2 = 0)
+        report "uart_rx: OVERSAMPLING must be even"
+        severity failure;
+
+    assert (CLK_HZ / (BAUDRATE*OVERSAMPLING) > 0)
+        report "uart_rx: CLK_HZ to low for this baudrate and oversampling"
+        severity failure;
+
     uart_tick <= '1' when (uart_tick_en = '1') and (div_count = DIV-1) else '0';
 
     process(clk)

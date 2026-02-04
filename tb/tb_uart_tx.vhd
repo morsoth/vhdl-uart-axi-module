@@ -198,7 +198,7 @@ begin
 		check_tx_frame(tx, tx_data);
 
 		wait for T_BIT;
-/*
+
 		-- Test 9: Reset while transmission --
 		wait until rising_edge(clk);
 		tx_start <= '1';
@@ -239,7 +239,7 @@ begin
 
 		check_tx_frame(tx, tx_data);
 		wait for T_BIT;
-*/
+
 		wait for 10 us;
 
 		report "[OK]: Testbench passed correctly!" severity note;

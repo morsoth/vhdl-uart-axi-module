@@ -12,6 +12,8 @@ architecture tb of tb_uart_core is
 	constant CLK_HZ       : positive := 50_000_000;
 	constant BAUDRATE     : positive := 115200;
 	constant OVERSAMPLING : positive := 16;
+    constant DATA_BITS    : natural := 8;
+    constant FIFO_SIZE    : natural := 4;
 
 	constant T_CLK  : time := 1 sec / CLK_HZ;
 
@@ -58,8 +60,8 @@ begin
           CLK_HZ       => CLK_HZ,
           BAUDRATE     => BAUDRATE,
           OVERSAMPLING => OVERSAMPLING,
-          DATA_BITS    => 8,
-          FIFO_SIZE    => 4
+          DATA_BITS    => DATA_BITS,
+          FIFO_SIZE    => FIFO_SIZE
         )
         port map (
           clk      => clk,
