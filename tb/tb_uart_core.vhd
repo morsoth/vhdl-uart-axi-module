@@ -12,8 +12,8 @@ architecture tb of tb_uart_core is
 	constant CLK_HZ       : positive := 50_000_000;
 	constant BAUDRATE     : positive := 115200;
 	constant OVERSAMPLING : positive := 16;
-    constant DATA_BITS    : natural := 8;
-    constant FIFO_SIZE    : natural := 4;
+    constant DATA_BITS    : positive := 8;
+    constant FIFO_SIZE    : positive := 4;
 
 	constant T_CLK  : time := 1 sec / CLK_HZ;
 
@@ -57,28 +57,25 @@ begin
 
     dut : entity work.uart_core
         generic map (
-          CLK_HZ       => CLK_HZ,
-          BAUDRATE     => BAUDRATE,
-          OVERSAMPLING => OVERSAMPLING,
-          DATA_BITS    => DATA_BITS,
-          FIFO_SIZE    => FIFO_SIZE
+			CLK_HZ       => CLK_HZ,
+			BAUDRATE     => BAUDRATE,
+			OVERSAMPLING => OVERSAMPLING,
+			DATA_BITS    => DATA_BITS,
+			FIFO_SIZE    => FIFO_SIZE
         )
         port map (
-          clk      => clk,
-          rst      => rst,
-          rx       => rx,
-          tx       => tx,
-          rx_en    => rx_en,
-          rx_ready => rx_ready,
-          rx_data  => rx_data,
-          tx_en    => tx_en,
-          tx_ready => tx_ready,
-          tx_data  => tx_data
+			clk      => clk,
+			rst      => rst,
+			rx       => rx,
+			tx       => tx,
+			rx_en    => rx_en,
+			rx_ready => rx_ready,
+			rx_data  => rx_data,
+			tx_en    => tx_en,
+			tx_ready => tx_ready,
+			tx_data  => tx_data
         );
 
-  ---------------------------------------------------------------------------
-  -- Stimulus
-  ---------------------------------------------------------------------------
 	stim : process
 		variable saved_byte : std_logic_vector(7 downto 0);
 	begin

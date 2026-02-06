@@ -6,8 +6,8 @@ entity uart_core is
         CLK_HZ       : positive := 50_000_000;
         BAUDRATE     : positive := 115200;
         OVERSAMPLING : positive := 16;
-        DATA_BITS    : natural := 8;
-        FIFO_SIZE    : natural := 4
+        DATA_BITS    : positive := 8;
+        FIFO_SIZE    : positive := 4
     );
     port(
         clk      : in std_logic;
@@ -16,13 +16,13 @@ entity uart_core is
         rx       : in std_logic;
         tx       : out std_logic;
 
+        rx_data  : out std_logic_vector(DATA_BITS-1 downto 0);
         rx_en    : in std_logic;
         rx_ready : out std_logic;
-        rx_data  : out std_logic_vector(DATA_BITS-1 downto 0);
 
+        tx_data  : in std_logic_vector(DATA_BITS-1 downto 0);
         tx_en    : in std_logic;
-        tx_ready : out std_logic;
-        tx_data  : in std_logic_vector(DATA_BITS-1 downto 0)
+        tx_ready : out std_logic
     );
 end entity;
 

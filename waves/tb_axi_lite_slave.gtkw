@@ -1,0 +1,74 @@
+[*]
+[*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
+[*] Wed Feb  4 14:36:59 2026
+[*]
+[dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-axi-module\build\tb_axi_lite_slave.ghw"
+[dumpfile_mtime] "Wed Feb  4 14:36:22 2026"
+[dumpfile_size] 1712
+[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-axi-module\waves\tb_axi_lite_slave.gtkw"
+[timestart] 0
+[size] 1920 983
+[pos] -27 -24
+*-26.699999 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_axi_lite_slave.
+[sst_width] 280
+[signals_width] 237
+[sst_expanded] 1
+[sst_vpaned_height] 295
+@28
+top.tb_axi_lite_slave.dut.clk
+top.tb_axi_lite_slave.dut.rst
+@200
+-
+-AXI
+@22
+#{top.tb_axi_lite_slave.aw_addr[7:0]} top.tb_axi_lite_slave.aw_addr[7] top.tb_axi_lite_slave.aw_addr[6] top.tb_axi_lite_slave.aw_addr[5] top.tb_axi_lite_slave.aw_addr[4] top.tb_axi_lite_slave.aw_addr[3] top.tb_axi_lite_slave.aw_addr[2] top.tb_axi_lite_slave.aw_addr[1] top.tb_axi_lite_slave.aw_addr[0]
+@28
+top.tb_axi_lite_slave.dut.aw_valid
+top.tb_axi_lite_slave.dut.aw_ready
+@200
+-
+@22
+#{top.tb_axi_lite_slave.w_data[31:0]} top.tb_axi_lite_slave.w_data[31] top.tb_axi_lite_slave.w_data[30] top.tb_axi_lite_slave.w_data[29] top.tb_axi_lite_slave.w_data[28] top.tb_axi_lite_slave.w_data[27] top.tb_axi_lite_slave.w_data[26] top.tb_axi_lite_slave.w_data[25] top.tb_axi_lite_slave.w_data[24] top.tb_axi_lite_slave.w_data[23] top.tb_axi_lite_slave.w_data[22] top.tb_axi_lite_slave.w_data[21] top.tb_axi_lite_slave.w_data[20] top.tb_axi_lite_slave.w_data[19] top.tb_axi_lite_slave.w_data[18] top.tb_axi_lite_slave.w_data[17] top.tb_axi_lite_slave.w_data[16] top.tb_axi_lite_slave.w_data[15] top.tb_axi_lite_slave.w_data[14] top.tb_axi_lite_slave.w_data[13] top.tb_axi_lite_slave.w_data[12] top.tb_axi_lite_slave.w_data[11] top.tb_axi_lite_slave.w_data[10] top.tb_axi_lite_slave.w_data[9] top.tb_axi_lite_slave.w_data[8] top.tb_axi_lite_slave.w_data[7] top.tb_axi_lite_slave.w_data[6] top.tb_axi_lite_slave.w_data[5] top.tb_axi_lite_slave.w_data[4] top.tb_axi_lite_slave.w_data[3] top.tb_axi_lite_slave.w_data[2] top.tb_axi_lite_slave.w_data[1] top.tb_axi_lite_slave.w_data[0]
+@28
+top.tb_axi_lite_slave.dut.w_valid
+top.tb_axi_lite_slave.dut.w_ready
+@200
+-
+@28
+#{top.tb_axi_lite_slave.b_resp[1:0]} top.tb_axi_lite_slave.b_resp[1] top.tb_axi_lite_slave.b_resp[0]
+top.tb_axi_lite_slave.dut.b_valid
+top.tb_axi_lite_slave.dut.b_ready
+@200
+-
+@22
+#{top.tb_axi_lite_slave.ar_addr[7:0]} top.tb_axi_lite_slave.ar_addr[7] top.tb_axi_lite_slave.ar_addr[6] top.tb_axi_lite_slave.ar_addr[5] top.tb_axi_lite_slave.ar_addr[4] top.tb_axi_lite_slave.ar_addr[3] top.tb_axi_lite_slave.ar_addr[2] top.tb_axi_lite_slave.ar_addr[1] top.tb_axi_lite_slave.ar_addr[0]
+@28
+top.tb_axi_lite_slave.dut.ar_valid
+top.tb_axi_lite_slave.dut.ar_ready
+@200
+-
+@22
+#{top.tb_axi_lite_slave.r_data[31:0]} top.tb_axi_lite_slave.r_data[31] top.tb_axi_lite_slave.r_data[30] top.tb_axi_lite_slave.r_data[29] top.tb_axi_lite_slave.r_data[28] top.tb_axi_lite_slave.r_data[27] top.tb_axi_lite_slave.r_data[26] top.tb_axi_lite_slave.r_data[25] top.tb_axi_lite_slave.r_data[24] top.tb_axi_lite_slave.r_data[23] top.tb_axi_lite_slave.r_data[22] top.tb_axi_lite_slave.r_data[21] top.tb_axi_lite_slave.r_data[20] top.tb_axi_lite_slave.r_data[19] top.tb_axi_lite_slave.r_data[18] top.tb_axi_lite_slave.r_data[17] top.tb_axi_lite_slave.r_data[16] top.tb_axi_lite_slave.r_data[15] top.tb_axi_lite_slave.r_data[14] top.tb_axi_lite_slave.r_data[13] top.tb_axi_lite_slave.r_data[12] top.tb_axi_lite_slave.r_data[11] top.tb_axi_lite_slave.r_data[10] top.tb_axi_lite_slave.r_data[9] top.tb_axi_lite_slave.r_data[8] top.tb_axi_lite_slave.r_data[7] top.tb_axi_lite_slave.r_data[6] top.tb_axi_lite_slave.r_data[5] top.tb_axi_lite_slave.r_data[4] top.tb_axi_lite_slave.r_data[3] top.tb_axi_lite_slave.r_data[2] top.tb_axi_lite_slave.r_data[1] top.tb_axi_lite_slave.r_data[0]
+@28
+#{top.tb_axi_lite_slave.r_resp[1:0]} top.tb_axi_lite_slave.r_resp[1] top.tb_axi_lite_slave.r_resp[0]
+top.tb_axi_lite_slave.dut.r_valid
+top.tb_axi_lite_slave.dut.r_ready
+@200
+-
+-REGFILE
+@22
+#{top.tb_axi_lite_slave.wr_addr[7:0]} top.tb_axi_lite_slave.wr_addr[7] top.tb_axi_lite_slave.wr_addr[6] top.tb_axi_lite_slave.wr_addr[5] top.tb_axi_lite_slave.wr_addr[4] top.tb_axi_lite_slave.wr_addr[3] top.tb_axi_lite_slave.wr_addr[2] top.tb_axi_lite_slave.wr_addr[1] top.tb_axi_lite_slave.wr_addr[0]
+#{top.tb_axi_lite_slave.wr_data[7:0]} top.tb_axi_lite_slave.wr_data[7] top.tb_axi_lite_slave.wr_data[6] top.tb_axi_lite_slave.wr_data[5] top.tb_axi_lite_slave.wr_data[4] top.tb_axi_lite_slave.wr_data[3] top.tb_axi_lite_slave.wr_data[2] top.tb_axi_lite_slave.wr_data[1] top.tb_axi_lite_slave.wr_data[0]
+@28
+top.tb_axi_lite_slave.dut.wr_en
+@200
+-
+@22
+#{top.tb_axi_lite_slave.rd_addr[7:0]} top.tb_axi_lite_slave.rd_addr[7] top.tb_axi_lite_slave.rd_addr[6] top.tb_axi_lite_slave.rd_addr[5] top.tb_axi_lite_slave.rd_addr[4] top.tb_axi_lite_slave.rd_addr[3] top.tb_axi_lite_slave.rd_addr[2] top.tb_axi_lite_slave.rd_addr[1] top.tb_axi_lite_slave.rd_addr[0]
+#{top.tb_axi_lite_slave.rd_data[7:0]} top.tb_axi_lite_slave.rd_data[7] top.tb_axi_lite_slave.rd_data[6] top.tb_axi_lite_slave.rd_data[5] top.tb_axi_lite_slave.rd_data[4] top.tb_axi_lite_slave.rd_data[3] top.tb_axi_lite_slave.rd_data[2] top.tb_axi_lite_slave.rd_data[1] top.tb_axi_lite_slave.rd_data[0]
+@28
+top.tb_axi_lite_slave.dut.rd_en
+[pattern_trace] 1
+[pattern_trace] 0

@@ -127,6 +127,8 @@ begin
                                 div_count <= 0;
                             end if;
 
+                        when others => state <= IDLE_ST;
+
                     end case;
                 end if;
             end if;

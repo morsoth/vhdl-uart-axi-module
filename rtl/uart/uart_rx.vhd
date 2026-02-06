@@ -167,6 +167,9 @@ begin
                             else
                                 tick_count <= tick_count + 1;
                             end if;
+                        
+                        when others => state <= IDLE_ST;
+
                     end case;
                 end if;
             end if;

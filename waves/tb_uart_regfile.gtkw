@@ -1,0 +1,53 @@
+[*]
+[*] GTKWave Analyzer v3.3.124 (w)1999-2025 BSI
+[*] Wed Feb  4 11:30:16 2026
+[*]
+[dumpfile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-axi-module\build\tb_uart_regfile.ghw"
+[dumpfile_mtime] "Wed Feb  4 11:30:09 2026"
+[dumpfile_size] 1619
+[savefile] "C:\Users\pzaragoza\Documents\GitHub\vhdl-uart-axi-module\waves\tb_uart_regfile.gtkw"
+[timestart] 0
+[size] 1920 983
+[pos] -27 -24
+*-27.600000 14 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb_uart_regfile.
+[sst_width] 280
+[signals_width] 191
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.tb_uart_regfile.dut.clk
+top.tb_uart_regfile.dut.rst
+@200
+-
+-READ
+@22
+#{top.tb_uart_regfile.rd_addr[7:0]} top.tb_uart_regfile.rd_addr[7] top.tb_uart_regfile.rd_addr[6] top.tb_uart_regfile.rd_addr[5] top.tb_uart_regfile.rd_addr[4] top.tb_uart_regfile.rd_addr[3] top.tb_uart_regfile.rd_addr[2] top.tb_uart_regfile.rd_addr[1] top.tb_uart_regfile.rd_addr[0]
+#{top.tb_uart_regfile.rd_data[7:0]} top.tb_uart_regfile.rd_data[7] top.tb_uart_regfile.rd_data[6] top.tb_uart_regfile.rd_data[5] top.tb_uart_regfile.rd_data[4] top.tb_uart_regfile.rd_data[3] top.tb_uart_regfile.rd_data[2] top.tb_uart_regfile.rd_data[1] top.tb_uart_regfile.rd_data[0]
+@28
+top.tb_uart_regfile.dut.rd_en
+@200
+-
+@22
+#{top.tb_uart_regfile.rx_data[7:0]} top.tb_uart_regfile.rx_data[7] top.tb_uart_regfile.rx_data[6] top.tb_uart_regfile.rx_data[5] top.tb_uart_regfile.rx_data[4] top.tb_uart_regfile.rx_data[3] top.tb_uart_regfile.rx_data[2] top.tb_uart_regfile.rx_data[1] top.tb_uart_regfile.rx_data[0]
+@28
+top.tb_uart_regfile.dut.rx_ready
+top.tb_uart_regfile.dut.rx_en
+@200
+-
+-WRITE
+@22
+#{top.tb_uart_regfile.wr_addr[7:0]} top.tb_uart_regfile.wr_addr[7] top.tb_uart_regfile.wr_addr[6] top.tb_uart_regfile.wr_addr[5] top.tb_uart_regfile.wr_addr[4] top.tb_uart_regfile.wr_addr[3] top.tb_uart_regfile.wr_addr[2] top.tb_uart_regfile.wr_addr[1] top.tb_uart_regfile.wr_addr[0]
+#{top.tb_uart_regfile.wr_data[7:0]} top.tb_uart_regfile.wr_data[7] top.tb_uart_regfile.wr_data[6] top.tb_uart_regfile.wr_data[5] top.tb_uart_regfile.wr_data[4] top.tb_uart_regfile.wr_data[3] top.tb_uart_regfile.wr_data[2] top.tb_uart_regfile.wr_data[1] top.tb_uart_regfile.wr_data[0]
+@28
+top.tb_uart_regfile.dut.wr_en
+@200
+-
+@22
+#{top.tb_uart_regfile.tx_data[7:0]} top.tb_uart_regfile.tx_data[7] top.tb_uart_regfile.tx_data[6] top.tb_uart_regfile.tx_data[5] top.tb_uart_regfile.tx_data[4] top.tb_uart_regfile.tx_data[3] top.tb_uart_regfile.tx_data[2] top.tb_uart_regfile.tx_data[1] top.tb_uart_regfile.tx_data[0]
+@28
+top.tb_uart_regfile.dut.tx_ready
+top.tb_uart_regfile.dut.tx_en
+[pattern_trace] 1
+[pattern_trace] 0
