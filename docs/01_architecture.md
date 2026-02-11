@@ -9,7 +9,7 @@ This document describes the RTL architecture of the UART peripheral and how it i
 3. **UART Core**  
    Implements the actual RX/TX logic and uses FIFOs to decouple bus timing from the UART bitrate.
 
-## 1. High-level System Overview
+## High-level System Overview
 
 From a software point of view, the UART peripheral is exposed as a memory-mapped I/O region. The CPU (AXI Master) performs normal loads/stores to a base address + offset, and the AXI protocol interconnect those transfers to this design (AXI Slave). Internally, the register file controls an UART core that drives the external `rx` / `tx` pins.
 
@@ -40,7 +40,7 @@ From a software point of view, the UART peripheral is exposed as a memory-mapped
     - `tx_ready` = "TX FIFO has space"
     - `tx_en` (pulse) = "push one TX byte"
 
-## 2. RTL Files
+## RTL Files
 
 - `rtl/axi/axi_lite_slave.vhd` : Minimal AXI4-Lite slave adapter.
 - `rtl/regfile/uart_regfile.vhd` : Memory-mapped register bank.
@@ -51,7 +51,7 @@ From a software point of view, the UART peripheral is exposed as a memory-mapped
 
 Testbenches live in `tb/`.
 
-## 3. UART Core Internals
+## UART Core Internals
 
 The UART core contains dedicated RX/TX submodules and FIFO buffers.
 
@@ -78,7 +78,7 @@ The UART core contains dedicated RX/TX submodules and FIFO buffers.
 
 FIFO depth is parameterizable.
 
-## 4. Register File (Register Map Summary)
+## Register File (Register Map Summary)
 
 The regfile exposes a small set of memory-mapped registers:
 
@@ -89,7 +89,7 @@ The regfile exposes a small set of memory-mapped registers:
 
 A detailed bit-level description is maintained in [`docs/02_register_map.md`](02_register_map.md).
 
-## 5. AXI4-Lite Slave Adapter
+## AXI4-Lite Slave Adapter
 
 The AXI-Lite slave is intentionally minimal:
 - Supports one read and write data transfer at a time.
@@ -107,7 +107,7 @@ If software accesses an undefined register offset:
 - Writes are ignored.
 - The AXI response remains `OKAY`.
 
-## 6. Dataflows
+## Dataflows
 
 ### TX Path (CPU → UART TX pin)
 
@@ -136,13 +136,13 @@ If software accesses an undefined register offset:
    - When reading `RXDATA`, it exposes the next RX byte on `rd_data`.
    - It also asserts `rx_en` (1-cycle pulse) to pop the FIFO only if RX is enabled and `rx_ready` is high.
 
-## 7. Clocking and Reset
+## Clocking and Reset
 
 - Single clock domain: all modules are synchronous to `clk`.
 - Reset: `rst` resets the internal state (AXI response valids, regfile state, etc.).
 - Handshake strobes (`wr_en`, `rd_en`, `tx_en`, `rx_en`) are **one-cycle pulses**.
 
-## 8. Limitations and Future Work
+## Limitations and Future Work
 
 Current design goals favor simplicity:
 - No interrupts (polling via STATUS).
