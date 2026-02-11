@@ -30,7 +30,7 @@ From a software point of view, the UART peripheral is exposed as a memory-mapped
   - Write: `wr_addr`, `wr_data`, `wr_en` (pulse)
   - Read: `rd_addr`, `rd_data`, `rd_en` (pulse)
 
-- **UART core handshake**
+- **UART core interface**
   - RX side:
     - `rx_data`
     - `rx_ready` = "RX FIFO has data"
@@ -66,14 +66,14 @@ The UART core contains dedicated RX/TX submodules and FIFO buffers.
 ### UART TX (`uart_tx.vhd`)
 - Waits for a byte from the TX FIFO.
 - Sends start bit, data bits, and stop bit.
-- Provides a ready/accept interface to the TX FIFO/control logic.
+- Provides a `tx_start`, `tx_accept` and `tx_busy` interface to the TX FIFO logic.
 
 ### FIFOs (`fifo_sync.vhd`)
 - **RX FIFO**:
-  - Write side driven by UART RX (`wr_en`).
-  - Read side driven by regfile (`rd_en` / `rx_en`).
+  - Write side driven by UART RX.
+  - Read side driven by regfile.
 - **TX FIFO**:
-  - Write side driven by regfile (`tx_en`).
+  - Write side driven by regfile.
   - Read side driven by UART TX.
 
 FIFO depth is parameterizable.
@@ -92,9 +92,9 @@ A detailed bit-level description is maintained in [`docs/02_register_map.md`](02
 ## 5. AXI4-Lite Slave Adapter
 
 The AXI-Lite slave is intentionally minimal:
-- Supports single outstanding read and write responses.
-- Always returns `OKAY` responses (`RRESP/BRESP = 00`).
-- Converts AXI handshakes into simple one-cycle strobes for the regfile:
+- Supports one read and write data transfer at a time.
+- Always returns `OKAY` responses.
+- Converts AXI handshakes into simple one-cycle pulses for the regfile:
   - `wr_en` pulses once per accepted write transaction.
   - `rd_en` pulses once per accepted read transaction.
 
