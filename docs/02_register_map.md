@@ -5,8 +5,6 @@
 - Offsets are **byte offsets** from `BASE_ADDR`.
 - Reserved bits read as **0**. Writes to reserved bits are ignored.
 
----
-
 ## 0x00 — CTRL
 Control register.
 
@@ -17,8 +15,6 @@ Control register.
 
 **Reset value:** `RX_EN=1`, `TX_EN=1`
 
----
-
 ## 0x04 — STATUS
 Live status register.
 
@@ -26,8 +22,6 @@ Live status register.
 |-----|--------------|-----|-------------|
 | 1   | TX_NOT_FULL  | R   | `1` when TX FIFO can accept a byte. |
 | 0   | RX_NOT_EMPTY | R   | `1` when a received byte is available. |
-
----
 
 ## 0x08 — TXDATA
 Transmit data register (byte write).
@@ -39,8 +33,6 @@ Transmit data register (byte write).
 **Notes:**
 - If TX is disabled or FIFO is full, the write is ignored.
 
----
-
 ## 0x0C — RXDATA
 Receive data register (byte read).
 
@@ -50,8 +42,6 @@ Receive data register (byte read).
 
 **Notes:**
 - If RX is disabled or FIFO is empty, reads return 0 (and do not pop).
-
----
 
 ## Future work
 
